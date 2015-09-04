@@ -1,0 +1,37 @@
+#GIT_PS1_SHOWUPSTREAM="auto"
+#GIT_PS1_SHOWCOLORHINTS="yes"
+#source ~/.bash/git-prompt.sh
+
+#export PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ ";'
+
+#export JAVA_HOME=$(/usr/libexec/java_home)
+
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH:
+
+#export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="sv_SE.UTF-8"
+export LC_NUMERIC="sv_SE.UTF-8"
+export LC_TIME="sv_SE.UTF-8"
+
+export GREP_OPTIONS='--color=always'
+export GREP_COLOR='1;35;40'
+
+function diff {
+    colordiff -u "$@" | less -RF
+}
+
+function em { # Requires (emacs-server) to be called from emacs
+    emacsclient -n "$@"
+}
+
+#export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient 
+export ALTERNATE_EDITOR=vim EDITOR=vim VISUAL=vim # Trying vim for a while
+
+#alias emacs='emacsclient'
+
+export TERMINAL=gnome-terminal
+export SHELL=/usr/bin/zsh
