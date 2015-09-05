@@ -12,3 +12,5 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall 
 (cd ~/.inst && git clone git@github.com:hbin/top-programming-fonts.git && cd top-programming-fonts && chmod ugo+x install.sh && ./install.sh)
 (cd ~/.inst && git clone git@github.com:solarized/xresources.git)
+
+sudo dnf -y install xbacklight
