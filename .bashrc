@@ -30,6 +30,7 @@ function em { # Requires (emacs-server) to be called from emacs
 
 #export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient 
 export ALTERNATE_EDITOR=vim EDITOR=vim VISUAL=vim # Trying vim for a while
+alias vim='vimx'
 
 #alias emacs='emacsclient'
 

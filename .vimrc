@@ -61,6 +61,7 @@ set mouse=a
 set omnifunc=syntaxcomplete#Complete
 set background=dark
 colorscheme solarized
+set clipboard=unnamedplus
 
 set hidden
 let g:airline_powerline_fonts=2
