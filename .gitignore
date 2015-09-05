@@ -4,12 +4,15 @@
 .cache
 .config
 .esd_auth
+.fonts
 .gitignore.swp
 .gnupg
 .histfile
+.inst
 .ssh
 .local
 .mozilla
+.vim
 .viminfo
 .zcompdump
 Pictures

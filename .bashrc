@@ -17,8 +17,8 @@ export LC_MONETARY="sv_SE.UTF-8"
 export LC_NUMERIC="sv_SE.UTF-8"
 export LC_TIME="sv_SE.UTF-8"
 
-export GREP_OPTIONS='--color=always'
-export GREP_COLOR='1;35;40'
+#export GREP_OPTIONS='--color=always'
+#export GREP_COLOR='1;35;40'
 
 function diff {
     colordiff -u "$@" | less -RF
@@ -33,5 +33,8 @@ export ALTERNATE_EDITOR=vim EDITOR=vim VISUAL=vim # Trying vim for a while
 
 #alias emacs='emacsclient'
 
-export TERMINAL=gnome-terminal
+export TERMINAL=urxvt
 export SHELL=/usr/bin/zsh
+
+xrdb -merge .Xresources
+xrdb -merge .inst/xresources/Xresources.dark
