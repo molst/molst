@@ -4,6 +4,7 @@ sudo dnf -y install gvim # vim with X11 support (for clipboard cut+paste)
 sudo dnf -y install rxvt-unicode
 sudo dnf -y install i3
 sudo dnf -y install i3status
+sudo dnf -y install i3lock
 sudo dnf -y install zsh
 sudo dnf -y install colordiff
 sudo dnf -y install ranger # image preview problem: https://github.com/hut/ranger/issues/104
