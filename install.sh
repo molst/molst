@@ -7,7 +7,7 @@ sudo dnf -y install i3status
 sudo dnf -y install i3lock
 sudo dnf -y install zsh
 sudo dnf -y install colordiff
-sudo dnf -y install ranger # image preview problem: https://github.com/hut/ranger/issues/104
+sudo dnf -y install ranger
 sudo dnf -y install w3m w3m-img
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall 

@@ -10,3 +10,4 @@ molst machine setup
 # Notes
 
   * If an error about 'Sleep verb not supported' is encountered while trying to hibernate with `systemctl hibernate`, this is probably because there is no swap partition to store the whole RAM.
+  * In ranger, there is an image preview problem with a workaround https://github.com/hut/ranger/issues/104
