@@ -14,3 +14,8 @@ systemctl --user enable resume.service
 
   * If an error about 'Sleep verb not supported' is encountered while trying to hibernate with `systemctl hibernate`, this is probably because there is no swap partition to store the whole RAM.
   * In ranger, there is an image preview problem with a workaround https://github.com/hut/ranger/issues/104
+
+# Special directories
+
+  *.inst* Created by install.sh. Contains manually installed files and directories, such as cloned git repos. The other dot files and scripts may be dependent on these files, so they should not be deleted.
+  *.sysinst* Files that are copied to system directories by install.sh. These have no other purpose than backup after install.sh has finished successfully.

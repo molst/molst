@@ -16,4 +16,6 @@ vim +PluginInstall +qall
 
 sudo dnf -y install xbacklight
 
-systemctl --user enable resume.service #requires ~/.config/systemd/user/resume.service
+#Enable screen lock after suspend
+sudo cp ~/.sysinst/resume@.service /etc/systemd/system
+systemctl enable resume@molst.service
