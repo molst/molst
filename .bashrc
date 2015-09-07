@@ -32,13 +32,12 @@ alias sudo='sudo '
 
 #export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient 
 export ALTERNATE_EDITOR=vim EDITOR=vim VISUAL=vim # Trying vim for a while
-alias vim='vimx '
-alias vimse='sudo -E vimx ' #preserves settings when sudo-vim'ing so that clipboard works
-
-#alias emacs='emacsclient'
+alias vim='vimx'
+alias vimse='sudo -E vimx' #preserves settings when sudo-vim'ing so that clipboard works
 
 export TERMINAL=urxvt
 export SHELL=/usr/bin/zsh
 
 xrdb -merge ~/.Xresources
 xrdb -merge ~/.inst/xresources/Xresources.dark
+alias emacs='emacsclient'

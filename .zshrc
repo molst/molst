@@ -11,3 +11,5 @@ zstyle :compinstall filename '/home/molst/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+source ~/.bashrc
