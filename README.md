@@ -7,9 +7,6 @@ molst machine setup
   1. ```(cd ~ && git clone https://github.com/molst/molst.git molstt && cp -r molstt/* . && rm -rf molstt && ./install.sh)```
   1. logout+login
 
-put user file: .config/systemd/user/resume.service
-systemctl --user enable resume.service
-
 # Notes
 
   * If an error about 'Sleep verb not supported' is encountered while trying to hibernate with `systemctl hibernate`, this is probably because there is no swap partition to store the whole RAM.
