@@ -17,5 +17,6 @@ systemctl --user enable resume.service
 
 # Special directories
 
-  *.inst* Created by install.sh. Contains manually installed files and directories, such as cloned git repos. The other dot files and scripts may be dependent on these files, so they should not be deleted.
-  *.sysinst* Files that are copied to system directories by install.sh. These have no other purpose than backup after install.sh has finished successfully.
+*.inst* Created by install.sh. Contains manually installed files and directories, such as cloned git repos. The other dot files and scripts may be dependent on these files, so they should not be deleted.
+
+*.sysinst* Files that are copied to system directories by install.sh. These have no other purpose than backup after install.sh has finished successfully.
