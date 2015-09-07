@@ -161,6 +161,6 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
 bindsym XF86AudioMute exec amixer -q sset Master toggle 
-bindsym $mod+Control+Delete exec reboot
-bindsym $mod+Control+equal exec i3-msg exit
-bindsym $mod+Control+BackSpace exec i3lock --color 000000
+bindsym $mod+Control+Insert exec reboot
+bindsym $mod+Control+Delete exec i3-msg exit
+bindsym $mod+Control+BackSpace exec systemctl suspend #will also lock screen if systemd resume@.service is properly installed
