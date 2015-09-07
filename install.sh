@@ -15,3 +15,5 @@ vim +PluginInstall +qall
 (cd ~/.inst && git clone git@github.com:solarized/xresources.git)
 
 sudo dnf -y install xbacklight
+
+systemctl --user enable resume.service #requires ~/.config/systemd/user/resume.service
