@@ -163,4 +163,5 @@ bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
 bindsym XF86AudioMute exec amixer -q sset Master toggle 
 bindsym $mod+Control+Insert exec reboot
 bindsym $mod+Control+Delete exec i3-msg exit
-bindsym $mod+Control+BackSpace exec systemctl suspend #will also lock screen if systemd resume@.service is properly installed
+bindsym $mod+Control+equal exec systemctl suspend #will also lock screen if systemd resume@.service is properly installed
+bindsym $mod+Control+BackSpace exec i3lock -c 000000

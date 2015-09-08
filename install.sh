@@ -15,6 +15,14 @@ vim +PluginInstall +qall
 (cd ~/.inst && git clone git@github.com:solarized/xresources.git)
 
 sudo dnf -y install xbacklight
+sudo dnf -y install tlp tlp-rdw powertop
+
+sudo sed -i 's/^SATA_LINKPWR_ON_BAT.*$/SATA_LINKPWR_ON_BAT=max_performance/' /etc/defautl/tlp #avoid file system corruption with btrfs
+
+#ThinkPad specific power saving tools
+#http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html
+sudo dnf -y install --nogpgcheck http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release-1.0-0.noarch.rpm
+sudo dnf -y install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
 
 #Enable screen lock after suspend
 sudo cp ~/.sysinst/resume@.service /etc/systemd/system

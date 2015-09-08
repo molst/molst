@@ -11,6 +11,7 @@ molst machine setup
 
   * If an error about 'Sleep verb not supported' is encountered while trying to hibernate with `systemctl hibernate`, this is probably because there is no swap partition to store the whole RAM.
   * In ranger, there is an image preview problem with a workaround https://github.com/hut/ranger/issues/104
+  * Charging thresholds of for example 60-90 percent should be a good default according to various articles. The instructions [here](http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html) could be used but was avoided due to [this](http://linrunner.de/en/tlp/docs/tlp-faq.html#erratic-battery) information. `tlp fullcharge` can be used to fully charge the battery once ignoring thresholds.
 
 # Special directories
 
