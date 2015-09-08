@@ -41,3 +41,6 @@ export SHELL=/usr/bin/zsh
 xrdb -merge ~/.Xresources
 xrdb -merge ~/.inst/xresources/Xresources.dark
 alias emacs='emacsclient'
+
+setxkbmap -layout us,se
+setxkbmap -option 'grp:shifts_toggle'
