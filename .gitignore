@@ -4,11 +4,15 @@
 .cache
 .esd_auth
 .fonts
+.fzf.bash
+.fzf.zsh
+.fzf
 .gitignore.swp
 .gnupg
 .histfile
 .inst
 .ssh
+.lesshst
 .local
 .mozilla
 .vim

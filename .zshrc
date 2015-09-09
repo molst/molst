@@ -13,4 +13,6 @@ compinit
 # End of lines added by compinstall
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-source ~/.bashrc
+source ~/.commonshrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

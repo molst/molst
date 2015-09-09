@@ -65,3 +65,5 @@ set clipboard=unnamedplus
 
 set hidden
 let g:airline_powerline_fonts=2
+
+set rtp+=~/.fzf
