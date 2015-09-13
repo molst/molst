@@ -9,9 +9,11 @@
 .fzf.zsh
 .fzf
 .gitignore.swp
+.gnome
 .gnupg
 .histfile
 .inst
+.pki
 .ssh
 .lesshst
 .local
@@ -28,8 +30,10 @@ Pictures
 .config/evolution
 .config/gnome-session
 .config/goa-1.0
+.config/google-chrome
 .config/gtk-3.0
 .config/ibus
+.config/menus
 .config/nautilus
 .config/pulse
 .config/ranger/bookmarks

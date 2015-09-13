@@ -18,7 +18,14 @@ vim +PluginInstall +qall
 (cd ~/.inst && git clone git@github.com:hbin/top-programming-fonts.git && cd top-programming-fonts && chmod ugo+x install.sh && ./install.sh)
 (cd ~/.inst && git clone git@github.com:solarized/xresources.git)
 
+#tap clicks and such
 sudo cp ~/.sysinst/50-synaptics.conf /etc/X11/xorg.conf.d
+
+sudo cp ~/.sysinst/google-chrome.repo /etc/yum.repos.d
+sudo dnf install google-chrome-stable
+
+
+
 
 #####################################
 #### Power related installations ####
