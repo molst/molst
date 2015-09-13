@@ -18,7 +18,7 @@ vim +PluginInstall +qall
 (cd ~/.inst && git clone git@github.com:hbin/top-programming-fonts.git && cd top-programming-fonts && chmod ugo+x install.sh && ./install.sh)
 (cd ~/.inst && git clone git@github.com:solarized/xresources.git)
 
-
+sudo cp ~/.sysinst/50-synaptics.conf /etc/X11/xorg.conf.d
 
 #####################################
 #### Power related installations ####
