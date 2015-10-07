@@ -1,3 +1,5 @@
+cd ~
+
 #sudo dnf upgrade
 
 sudo dnf -y install gvim # vim with X11 support (for clipboard cut+paste)
@@ -23,6 +25,8 @@ sudo cp ~/.sysinst/50-synaptics.conf /etc/X11/xorg.conf.d
 
 sudo cp ~/.sysinst/google-chrome.repo /etc/yum.repos.d
 sudo dnf install google-chrome-stable
+
+wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 
 

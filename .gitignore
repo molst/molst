@@ -3,6 +3,7 @@
 .bash_history
 .bash_logout
 .cache
+.dropbox*
 .esd_auth
 .fonts
 .fzf.bash
@@ -13,6 +14,7 @@
 .gnupg
 .histfile
 .inst
+.lost
 .pki
 .ssh
 .lesshst
@@ -22,7 +24,9 @@
 .viminfo
 .w3m
 .zcompdump
+Documents
 Downloads
+Dropbox
 Pictures
 
 .config/abrt
