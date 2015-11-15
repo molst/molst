@@ -1,6 +1,9 @@
 cd ~
 
-#sudo dnf upgrade
+#sudo dnf update --refresh
+#sudo dnf install dnf-plugin-system-upgrade
+#sudo dnf system-upgrade download --releasever=23
+#sudo dnf system-upgrade reboot
 
 sudo dnf -y install gvim # vim with X11 support (for clipboard cut+paste)
 sudo dnf -y install rxvt-unicode
