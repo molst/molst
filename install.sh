@@ -31,7 +31,8 @@ sudo dnf -y install google-chrome-stable
 
 wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
-
+mkdir ~/bin
+(cd ~ && wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && chmod a+x lein)
 
 
 #####################################
