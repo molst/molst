@@ -41,7 +41,7 @@ wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 sudo dnf -y install xbacklight
 sudo dnf -y install tlp tlp-rdw powertop
 
-sudo sed -i 's/^SATA_LINKPWR_ON_BAT.*$/SATA_LINKPWR_ON_BAT=max_performance/' /etc/defautl/tlp #avoid file system corruption with btrfs
+sudo sed -i 's/^SATA_LINKPWR_ON_BAT.*$/SATA_LINKPWR_ON_BAT=max_performance/' /etc/default/tlp #avoid file system corruption with btrfs
 
 #ThinkPad specific power saving tools
 #http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html
