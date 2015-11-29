@@ -2,6 +2,7 @@
 .ICEauthority
 .bash_history
 .bash_logout
+.boot
 .cache
 .dropbox*
 .esd_auth
@@ -14,20 +15,24 @@
 .gnupg
 .histfile
 .inst
+.lein
 .lost
 .pki
 .ssh
 .lesshst
 .local
+.m2
 .mozilla
 .vim
 .viminfo
 .w3m
 .zcompdump
+bin
 Documents
 Downloads
 Dropbox
 Pictures
+installs
 
 .config/abrt
 .config/dconf
