@@ -48,6 +48,7 @@ set tabstop=3
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set autoread
 
 set laststatus=2
 set noshowmode
@@ -66,7 +67,7 @@ let g:airline_powerline_fonts=2
 
 set rtp+=~/.fzf
 
-
+au BufRead,BufNewFile *.boot setfiletype clojure
 
 fu! SaveSess()
   execute 'mksession! ' . getcwd() . '/.session.vim'
@@ -78,7 +79,7 @@ fu! RestoreSess()
     if bufexists(1)
       for l in range(1, bufnr('$'))
         if bufwinnr(l) == -1
-          exec 'sbuffer ' . l
+          exec 'buffer ' . l
         endif
       endfor
     endif

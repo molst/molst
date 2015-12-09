@@ -23,6 +23,7 @@
 .local
 .m2
 .mozilla
+.session.vim
 .vim
 .viminfo
 .w3m
