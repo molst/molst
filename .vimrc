@@ -49,6 +49,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoread
+set autochdir
 
 set laststatus=2
 set noshowmode
