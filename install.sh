@@ -32,7 +32,7 @@ sudo dnf -y install google-chrome-stable
 wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 (cd ~ && wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && chmod a+x lein && sudo mv lein /usr/local/bin)
-(cd ~ && wget https://github.com/boot-clj/boot-bin/releases/download/2.4.2/boot.sh && mv boot.sh boot && chmod a+x boot && sudo mv boot /usr/local/bin)
+(cd ~ && wget https://github.com/boot-clj/boot-bin/releases/download/2.5.2/boot.sh && mv boot.sh boot && chmod a+x boot && sudo mv boot /usr/local/bin)
 
 su -c 'dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
