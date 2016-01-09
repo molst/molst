@@ -50,6 +50,7 @@ set softtabstop=2
 set expandtab
 set autoread
 set autochdir
+set noswapfile
 
 set laststatus=2
 set noshowmode
@@ -71,12 +72,12 @@ set rtp+=~/.fzf
 au BufRead,BufNewFile *.boot setfiletype clojure
 
 fu! SaveSess()
-  execute 'mksession! ' . getcwd() . '/.session.vim'
+  execute 'mksession! ~/.session.vim'
 endfunction
 
 fu! RestoreSess()
-  if filereadable(getcwd() . '/.session.vim')
-    execute 'so ' . getcwd() . '/.session.vim'
+  if filereadable(glob('~/.session.vim'))
+    execute 'so ' . glob('~/.session.vim')
     if bufexists(1)
       for l in range(1, bufnr('$'))
         if bufwinnr(l) == -1
