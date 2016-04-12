@@ -5,7 +5,11 @@
 .boot
 .cache
 .dropbox*
+.emacs.d/ac-comphist.dat
 .emacs.d/elpa
+.emacs.d/ido.last
+.emacs.d/.emacs.desktop
+.emacs.d/.emacs.desktop.lock
 .esd_auth
 .fonts
 .fzf.bash
