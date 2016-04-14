@@ -1,7 +1,7 @@
 (desktop-save-mode 1) ;;Save desktop on exit
 (menu-bar-mode -1)
 
-#http://stackoverflow.com/questions/151945/how-do-i-control-how-emacs-makes-backup-files
+;;http://stackoverflow.com/questions/151945/how-do-i-control-how-emacs-makes-backup-files
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
  
 ;;window size
