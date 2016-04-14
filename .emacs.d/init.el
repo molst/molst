@@ -1,6 +1,9 @@
 (desktop-save-mode 1) ;;Save desktop on exit
 (menu-bar-mode -1)
 
+#http://stackoverflow.com/questions/151945/how-do-i-control-how-emacs-makes-backup-files
+(setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
+ 
 ;;window size
 (add-to-list 'default-frame-alist '(left . 0))
 (add-to-list 'default-frame-alist '(top . 0))
@@ -21,6 +24,13 @@
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/")) (package-initialize)
 (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t) (package-initialize)
+
+;;make kill and yank work with X clipboard
+(unless (package-installed-p 'xclip) (package-install 'xclip))
+(require 'xclip)
+(xclip-mode 1)
+(turn-on-xclip)
+(delete-selection-mode)
 
 ;Installed according to instructions on https://github.com/technomancy/clojure-mode/blob/master/README.md (using M-x package-install)
 (unless (package-installed-p 'clojure-mode) (package-install 'clojure-mode))

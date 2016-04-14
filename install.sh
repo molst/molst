@@ -6,6 +6,8 @@ cd ~
 #sudo dnf system-upgrade reboot
 
 sudo dnf -y install gvim # vim with X11 support (for clipboard cut+paste)
+sudo dnf -y install emacs-nox
+sudo dnf -y install xclip #copy and paste between cli and X
 sudo dnf -y install rxvt-unicode
 sudo dnf -y install i3
 sudo dnf -y install i3status
@@ -23,7 +25,7 @@ vim +PluginInstall +qall
 (cd ~/.inst && git clone git@github.com:hbin/top-programming-fonts.git && cd top-programming-fonts && chmod ugo+x install.sh && ./install.sh)
 (cd ~/.inst && git clone git@github.com:solarized/xresources.git)
 
-#tap clicks and such
+#tap clicks and such (palm detect waits for bug fix in kernel)
 sudo cp ~/.sysinst/50-synaptics.conf /etc/X11/xorg.conf.d
 
 sudo cp ~/.sysinst/google-chrome.repo /etc/yum.repos.d
