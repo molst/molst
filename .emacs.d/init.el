@@ -37,6 +37,9 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
 ;Installed according to instructions on https://github.com/technomancy/clojure-mode/blob/master/README.md (using M-x package-install)
 (unless (package-installed-p 'clojure-mode) (package-install 'clojure-mode))
 (require 'clojure-mode)

@@ -64,6 +64,14 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 
 #####################################
+#### Manual Emacs installations  ####
+#####################################
+mkdir -p ~/.emacs.d/maninstalls
+curl https://raw.githubusercontent.com/yoshiki/yaml-mode/master/yaml-mode.el > ~/.emacs.d/maninstalls/yaml-mode.el
+curl https://raw.githubusercontent.com/spotify/dockerfile-mode/master/dockerfile-mode.el > ~/.emacs.d/maninstalls/dockerfile-mode.el
+
+
+#####################################
 #### Power related installations ####
 #####################################
 

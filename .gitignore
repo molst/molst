@@ -10,6 +10,7 @@
 .emacs.d/backups
 .emacs.d/elpa
 .emacs.d/ido.last
+.emacs.d/maninstalls
 .emacs.d/.emacs.desktop
 .emacs.d/.emacs.desktop.lock
 .esd_auth
