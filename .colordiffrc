@@ -1,3 +1,5 @@
-newtext=green
-oldtext=red
-diffstuff=cyan
+plain=normal
+newtext=darkblue
+oldtext=darkred
+diffstuff=darkgreen
+cvsstuff=darkwhite

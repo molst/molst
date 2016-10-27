@@ -41,6 +41,26 @@ su -c 'dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-rel
 sudo dnf install unrar
 
 
+######################################
+#### Docker related installations ####
+######################################
+
+sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/fedora/$releasever/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+EOF
+
+sudo dnf install docker-engine
+sudo systemctl enable docker.service
+sudo gpasswd -a ${USER} docker
+#sudo systemctl start docker #### Not sure if this is needed after the above
+
+sudo sh -c 'curl -L "https://github.com/docker/compose/releases/download/1.8.1/docker-compose-$(uname -s)-$(uname -m)" > /usr/local/bin/docker-compose'
+sudo chmod +x /usr/local/bin/docker-compose
 
 
 #####################################

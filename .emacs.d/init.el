@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/maninstalls/")
+
 (desktop-save-mode 1) ;;Save desktop on exit
 (menu-bar-mode -1)
 
@@ -22,8 +24,8 @@
 (set 'indent-tabs-mode nil) ;;no tabs, just spaces
 
 (require 'package)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/")) (package-initialize)
-(add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t) (package-initialize)
+;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/")) (package-initialize)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t) (package-initialize)
 
 ;;make kill and yank work with X clipboard
 (unless (package-installed-p 'xclip) (package-install 'xclip))
@@ -31,6 +33,9 @@
 (xclip-mode 1)
 (turn-on-xclip)
 (delete-selection-mode)
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 ;Installed according to instructions on https://github.com/technomancy/clojure-mode/blob/master/README.md (using M-x package-install)
 (unless (package-installed-p 'clojure-mode) (package-install 'clojure-mode))
@@ -46,8 +51,9 @@
 (when (memq window-system '(mac ns)) (exec-path-from-shell-initialize))
 (unless (package-installed-p 'cider) (package-install 'cider))
 (require 'cider)
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(setq cider-prompt-for-symbol nil)
 (setq cider-popup-stacktraces nil)
+(add-hook 'cider-mode-hook #'eldoc-mode)
 (setq cider-hide-special-buffers t) ;;does not go through result buffers and such stuff when doing C-c b.
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 
@@ -64,18 +70,22 @@
 ;;(add-hook 'cider-interaction-mode-hook 'ac-nrepl-setup)
 ;;(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'cider-repl-mode))
 
-(defun nrepl-project-directory () (nrepl-project-directory-for (nrepl-current-dir)))
+(defun nrepl-project-directory () (clojure-project-dir))
 (defun nrepl-project-relative-to-absolute-path (relative-path) (format "%s%s" (nrepl-project-directory) relative-path))
 (defun nrepl-project-name () (replace-regexp-in-string "_" "-" (file-name-nondirectory (directory-file-name (nrepl-project-directory)))))
 (defvar nrepl-init-proj-name nil)
 (defun nrepl-project-dev-ns-name () (format "%s.dev" (nrepl-project-name)))
+(defun nrepl-eval (source-code-str)
+  (nrepl-sync-request:eval source-code-str
+                           (cider-default-connection)
+                           (cider-current-session)))
 (defun set-dev-ns ()  
   (message (format "Requiring dev ns '%s'..." nrepl-init-proj-name))
-  ;;(cider-load-file (nrepl-project-relative-to-absolute-path "dev/dev.clj"))
-  (message "%s" (nrepl-dict-get (nrepl-sync-request:eval (format "(require '%s) (in-ns '%s)" nrepl-init-proj-name nrepl-init-proj-name)) "value"))
+  ;(cider-load-file (nrepl-project-relative-to-absolute-path "dev/dev.clj"))
+  (nrepl-eval (format "(require '%s) (in-ns '%s)" nrepl-init-proj-name nrepl-init-proj-name))
   (cider-repl-set-ns nrepl-init-proj-name))
-(defun dev-reload-and-retest       () (set-dev-ns) (message "%s" (nrepl-dict-get (nrepl-sync-request:eval "(reload-and-retest)")       "value")))
-(defun dev-reload-retest-and-start () (set-dev-ns) (message "%s" (nrepl-dict-get (nrepl-sync-request:eval "(reload-retest-and-start)") "value")))
+(defun dev-reload-and-retest       () (set-dev-ns) (message "%s" (nrepl-dict-get (nrepl-eval "(reload-and-retest)")       "value")))
+(defun dev-reload-retest-and-start () (set-dev-ns) (message "%s" (nrepl-dict-get (nrepl-eval "(reload-retest-and-start)") "value")))
 
 (defun init-dev-env ()
   (paredit-mode +1)

@@ -30,6 +30,7 @@
 .local
 .m2
 .mozilla
+.p
 .session.vim
 .vim
 .viminfo
